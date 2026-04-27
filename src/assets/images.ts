@@ -1,0 +1,35 @@
+import type {ImageSourcePropType} from 'react-native';
+
+export const Images = {
+  loader: require('./loader-screen.png') as ImageSourcePropType,
+  quizRock: require('./image (46) 1.png') as ImageSourcePropType,
+  onboarding: [
+    require('./onboarding/descend-history.png') as ImageSourcePropType,
+    require('./onboarding/journey-stone.png') as ImageSourcePropType,
+    require('./onboarding/carved-time.png') as ImageSourcePropType,
+    require('./onboarding/industrial-heritage.png') as ImageSourcePropType,
+    require('./onboarding/beyond-surface.png') as ImageSourcePropType,
+  ],
+  sites: {
+    wieliczka: require('./locations/wieliczka-salt-mine.png') as ImageSourcePropType,
+    bochnia: require('./locations/bochnia-salt-mine.png') as ImageSourcePropType,
+    turda: require('./locations/salina-turda.png') as ImageSourcePropType,
+    slanic: require('./locations/slanic-salt-mine.png') as ImageSourcePropType,
+    hallstatt: require('./locations/hallstatt-salt-mine.png') as ImageSourcePropType,
+    zollverein: require('./locations/zollverein-coal-mine.png') as ImageSourcePropType,
+    bigPit: require('./locations/big-pit-national-coal-museum.png') as ImageSourcePropType,
+    nordPas: require('./locations/nord-pas-de-calais-mining-basin.png') as ImageSourcePropType,
+    banska: require('./locations/banska-stiavnica-mining-complex.png') as ImageSourcePropType,
+    falun: require('./locations/falun-copper-mine.png') as ImageSourcePropType,
+    eden: require('./locations/eden-project-quarry.png') as ImageSourcePropType,
+    carrara: require('./locations/carrara-marble-quarries.png') as ImageSourcePropType,
+    rummu: require('./locations/rummu-quarry.png') as ImageSourcePropType,
+    stMargarethen: require('./locations/st-margarethen-quarry.png') as ImageSourcePropType,
+    monsted: require('./locations/monsted-limestone-quarry.png') as ImageSourcePropType,
+    sala: require('./locations/sala-silvermine.png') as ImageSourcePropType,
+    beckhampton: require('./locations/beckhampton-quarry-spaces.png') as ImageSourcePropType,
+    derinkuyu: require('./locations/derinkuyu-underground-city.png') as ImageSourcePropType,
+    caveHotels: require('./locations/cave-hotels-guadix-matera.png') as ImageSourcePropType,
+    guido: require('./locations/kopalnia-guido-mine.png') as ImageSourcePropType,
+  },
+};
