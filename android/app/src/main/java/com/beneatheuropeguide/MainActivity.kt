@@ -1,4 +1,4 @@
-package com.butane.underground.routes
+package com.beneatheuropeguide
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

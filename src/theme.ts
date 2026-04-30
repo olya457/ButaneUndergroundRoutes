@@ -1,10 +1,10 @@
 import {Platform} from 'react-native';
 
 export const colors = {
-  ember: '#f4771f',
-  emberLight: '#ff902b',
-  rust: '#cf4610',
-  rustDark: '#8d2307',
+  ember: '#584d46ff',
+  emberLight: '#38312bff',
+  rust: '#752809ff',
+  rustDark: '#1a100dff',
   canyon: '#5b2107',
   card: 'rgba(126, 49, 11, 0.68)',
   cardSoft: 'rgba(151, 61, 15, 0.54)',
