@@ -1,19 +1,19 @@
 workflows:
   sample-workflow:
-    name: Letto Max Choice Type
+    name: Butane Underground Routes
     max_build_duration: 120
     instance_type: mac_mini_m2
     integrations:
-      app_store_connect: Letto Max Choice Type
+      app_store_connect: Butane Underground Routes
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.heghoetato.jgahohgiype
+        bundle_identifier: com.vebikilascet.bernycibolac
       vars:
-        APP_STORE_APPLE_ID: 6756238326
-        BUNDLE_ID: 'com.heghoetato.jgahohgiype'
-        XCODE_WORKSPACE: 'LettoMaxChoiceType.xcworkspace'
-        XCODE_SCHEME: 'LettoMaxChoiceType'
+        APP_STORE_APPLE_ID: 6766798070
+        BUNDLE_ID: 'com.vebikilascet.bernycibolac'
+        XCODE_WORKSPACE: 'ButaneUndergroundRoutes.xcworkspace'
+        XCODE_SCHEME: 'ButaneUndergroundRoutes'
     scripts:
       - name: Install node modules
         script: |
@@ -50,4 +50,4 @@ workflows:
       app_store_connect:
         auth: integration
         submit_to_app_store: true
-        copyright: VESA ENSIO LAHDEMAKI
+        copyright: RIMKE SPELT
