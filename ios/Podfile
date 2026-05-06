@@ -8,6 +8,27 @@ require Pod::Executable.execute_command('node', ['-p',
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
 
+def fix_fmt_for_xcode_26_4(installer)
+  # Xcode 26.4's Apple Clang rejects fmt 11.0.2 consteval format checks.
+  fmt_base = File.join(installer.sandbox.pod_dir('fmt'), 'include', 'fmt', 'base.h')
+  if File.exist?(fmt_base)
+    content = File.read(fmt_base)
+    patched = content.gsub(/^#\s*define FMT_USE_CONSTEVAL 1$/, '#  define FMT_USE_CONSTEVAL 0')
+    if patched != content
+      File.chmod(0644, fmt_base)
+      File.write(fmt_base, patched)
+    end
+  end
+
+  installer.pods_project.targets.each do |target|
+    next unless target.name == 'fmt'
+
+    target.build_configurations.each do |config|
+      config.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'c++17'
+    end
+  end
+end
+
 linkage = ENV['USE_FRAMEWORKS']
 if linkage != nil
   Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
@@ -31,5 +52,7 @@ target 'ButaneUndergroundRoutes' do
       :mac_catalyst_enabled => false,
       # :ccache_enabled => true
     )
+
+    fix_fmt_for_xcode_26_4(installer)
   end
 end
